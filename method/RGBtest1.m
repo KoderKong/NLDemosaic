@@ -61,7 +61,7 @@ j = zoompan(zoom,j0,N);
 end
 
 function k = zoompan(zoom,k0,kend)
-k = k0+round([-0.5 0.5]*kend/zoom);
+k = round(k0+[-0.5 0.5]*kend/zoom);
 if min(k) < 1
     k = k-min(k)+1;
 elseif max(k) > kend
